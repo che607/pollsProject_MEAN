@@ -1,0 +1,23 @@
+<a href="#!/main" class="pollLink">Cancel</a>
+<br>
+<h1>Put the question and the options here:</h1>
+<br>
+<br>
+<div ng-controller='pollController'>
+  <form ng-submit="newPoll(poll)">
+    Question:<input type="text" name="question" ng-model='poll.question'><br><br>
+    Option 1:<input type="text" name="option1" ng-model='poll.option1'><br>
+    Option 2:<input type="text" name="option2" ng-model='poll.option2'><br>
+    Option 3:<input type="text" name="option3" ng-model='poll.option3'><br>
+    Option 4:<input type="text" name="option4" ng-model='poll.option4'><br>
+    <br>
+    <button class="pollButton">Create Poll</button>
+  </form>
+  <br>
+  <br>
+  <div ng-if='errors'>
+    <ul>
+      <li ng-repeat='error in errors'>{{ error }}</li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div ng-controller="pollController" ng-init="viewPoll(param)">
+<a href="#!/main" class="pollLink">Go To Polls</a>
+<br>
+<br>
+<h3>{{poll[0].question}}</h3>
+<h4>Click the Vote button to choose one.</h4>
+<br>
+<br>
+<br>
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Current Count of Votes</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <td>{{poll[0].option1}}</td>
+    <td>{{poll[0].count1}}</td>
+    <td><button ng-click="vote1(poll[0])">Vote</button></td>
+  </tr>
+  <tr>
+    <td>{{poll[0].option2}}</td>
+    <td>{{poll[0].count2}}</td>
+    <td><button ng-click="vote2(poll[0])">Vote</button></td>
+  </tr>
+  <tr>
+    <td>{{poll[0].option3}}</td>
+    <td>{{poll[0].count3}}</td>
+    <td><button ng-click="vote3(poll[0])">Vote</button></td>
+  </tr>
+  <tr>
+    <td>{{poll[0].option4}}</td>
+    <td>{{poll[0].count4}}</td>
+    <td><button ng-click="vote4(poll[0])">Vote</button></td>
+  </tr>
+</table>
+</div>

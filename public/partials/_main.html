@@ -1,0 +1,26 @@
+<div class="pollLink"><a href="#!/newPoll">Create a New Poll </a><button ng-controller="navController" ng-click='logout()'>Logout</button></div>
+<div ng-controller="pollController">
+<br>
+<h1>Current Polls:</h1>
+<br>
+<br>
+<form class='searchbar'>
+  <input ng-model='search.$' placeholder="Search">
+</form>
+<br>
+<br>
+<table ng-init='getPolls()'>
+  <tr>
+    <th>Name</th>
+    <th>Survey Question</th>
+    <th>Date Posted</th>
+    <th>Action</th>
+  </tr>
+  <tr ng-repeat="poll in polls | filter:search:strict">
+    <td>{{poll.user}}</td>
+    <td><a href="#!/viewPoll/{{poll._id}}">{{poll.question}}</a></td>
+    <td>{{poll.createdAt  | date:'MMMM d yyyy'}}</td>
+    <td><div ng-if="poll.user == currentUser"><button ng-click="deletePoll(poll)">Delete</button></div></td>
+  </tr>
+</table>
+</div>
