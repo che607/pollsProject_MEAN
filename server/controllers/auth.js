@@ -7,7 +7,7 @@ module.exports = {
     console.log('inside serverside controller - auth.js');
     User.findOne({ name: request.body.name })
     .then(function(user){
-      if (!user) throw new Error('no credentials match');
+      if (!user) throw new Error('This name has not been registered.');
       console.log("user: ", user)
       login(request, response, user)
     })

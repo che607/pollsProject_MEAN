@@ -8,18 +8,18 @@ angular.module('app')
         };
 
         $scope.login = function(){
-          console.log('inside mainController')
+          console.log('Inside client side userService.login function');
           userService.login($scope.user, function(errorResponse){
-            if (errorsArray){
-              return displayErrors(errorsArray);
+            console.log("in here 1", errorResponse[0]);
+            if (errorResponse[0] === "This name has not been registered."){
+              console.log("inside IF")
+              return displayErrors(errorResponse);
             }
-          })
-            .then(function(){
+            else{
+              console.log("INSIDE ELSE")
               $location.path('/main');
-            })
-            .catch(function(errorResponse){
-              console.log(errorResponse);
-            });
+            }
+          });
         };
 
         $scope.register = function(callback){
@@ -34,6 +34,7 @@ angular.module('app')
         };
 
         function displayErrors(errorArrayOrString){
+          // console.log("inside displayErrors function");
           $scope.errors = Array.isArray(errorArrayOrString) ? errorArrayOrString : [errorArrayOrString];
         };
 

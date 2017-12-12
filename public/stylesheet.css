@@ -2,6 +2,40 @@
   margin: 0px;
   padding: 0px;
 }
+.reg{
+  display: inline-block;
+  margin-left: -489px;
+  vertical-align: top;
+  margin-right: 35px;
+  margin-top: 55px;
+}
+.log{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 55px;
+}
+.polls{
+  width: 555px;
+  height: 250px;
+  display: inline-block;
+  margin-left: 250px;
+  margin-top: 18px;
+}
+.topBorder{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: top;
+  margin-left: 473px;
+  font-weight: bold;
+  font-size: 25px;
+}
+p{
+  color: red;
+  font-weight: bold;
+  margin-top: 130px;
+  text-align: center;
+}
 button{
   text-align: right;
 }

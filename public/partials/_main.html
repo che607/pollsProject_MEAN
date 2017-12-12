@@ -1,4 +1,4 @@
-<div class="pollLink"><a href="#!/newPoll">Create a New Poll </a><button ng-controller="navController" ng-click='logout()'>Logout</button></div>
+<div class="pollLink"><a href="#!/newPoll">Create a New Poll </a><ng-include src="'partials/shared/_nav.html'" class='logout'></ng-include></div>
 <div ng-controller="pollController">
 <br>
 <h1>Current Polls:</h1>
